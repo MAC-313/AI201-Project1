@@ -9,27 +9,26 @@
 
 ## Domain
 
-<!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
+I chose to focus on the domain of dining, and scoured the internet for sources I could locate related to dining at a university of choosing. The title of my domain is "user reviews (students/staff) of dining options at Virginia Polytechnic Institute and State University (Virginia Tech)"
+
+This knowledge is very valuable because it is able to give prospective students data that they can utilise to make an informed decision. Moreover, students stand to benefit from this information becuase food options play a strong and vaulable role in student health and well-being (which, in turn, greatly affect student performance). This information is difficult to source through official channels because of privacy concerns illustrated by the University (i.e., they aren't very forthcoming with specifics), and the highly personal nature of food preferences and availability 
 
 ---
 
 ## Documents
 
-<!-- List your specific sources: URLs, subreddit names, forum threads, or file descriptions.
-     Aim for at least 10 sources that together cover different subtopics or perspectives within your domain. -->
-
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | Business Insider | Business Insider article profiling Virginia Tech's award-winning dining centers, focusing on high-quality offerings like lobster, brisket, and campus chains. | https://www.businessinsider.com/virginia-tech-best-campus-dining-2014-10 |
+| 2 | College Confidential | College Confidential forum thread discussing VT's flexible dining plans, meal cost structure, individual chef setups, and late-night recommendations. | https://talk.collegeconfidential.com/t/how-good-is-the-food-really/2074350/2 |
+| 3 | Collegiate Times (Op-Ed) | Collegiate Times op-ed evaluating the required meal plan structure for first-years, discussing the repetitive nature of eating on campus, and comparing identical venue menus. | https://www.collegiatetimes.com/opinion/a-year-of-eating-at-virginia-tech/article_7a3c5ed9-b8d5-4498-9285-7aa2c30d0e12.html |
+| 4 | Collegiate Times | Collegiate Times foodie guide offering recommendations on overlooked items like Turner's crepes, Deet's Italian sodas, and Owen's Fantastic Frank sandwich. | https://www.collegiatetimes.com/lifestyles/good-eats-a-foodies-guide-to-virginia-tech-dining/article_b946dbac-c4ea-11e9-97f8-cf607c6f136b.html |
+| 5 | Her Campus | Her Campus forum review ranking top venues like Turners and West End from a freshman picky eater perspective, while identifying subpar options like Newman Library Cafe. | https://www.hercampus.com/life/summer-everything-bag-cvs/ |
+| 6 | Journeyman Joe | Journeyman Joe blog post reviewing an all-you-can-eat student dinner experience at Dietrick Dining Hall (D2), detailing the architecture, pricing, and food variety. | https://journeymanjoe.com/dining-at-d2-a-vt-dining-hall-experience/ |
+| 7 | Niche | Niche campus review critique highlighting high food prices, pricing discrepancies, and broader student observations regarding campus affordability. | https://www.niche.com/colleges/virginia-tech/reviews/?page=2 |
+| 8 | Spoon University | Spoon University review praising VT's Princeton Review ranking, focusing on DXpress grab-and-go options, Qdoba value, and weekend West End/D2 brunches. | https://spoonuniversity.com/school/virginia-tech/virginia-tech-dining-beyonce-college-food/ |
+| 9 | The Tab | The Tab comprehensive dining hall guide ranking options from worst to best, featuring specific dish reviews for Turners Place, D2, and tips to avoid crowds. | https://archive.thetab.com/us/virginiatech/2017/06/13/virginia-tech-dining-hall-guide-worst-to-best-2505 |
+| 10 | Reddit | Reddit thread on r/VirginiaTech exploring an unpopular junior opinion stating that campus food options are unhealthy, overrated, and over-reliant on fast-food chains. | https://www.reddit.com/r/VirginiaTech/comments/1n155b2/unpopular_opinion_the_food_at_tech_is_so_overrated/ |
 
 ---
 
@@ -40,11 +39,11 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**
+**Chunk size: 800 characters**
 
-**Overlap:**
+**Overlap: 100 characters**
 
-**Reasoning:**
+**Reasoning: Most of the included sources are reviews of some sort or posts on forums. While highly individual, the vast majority are split into paragraph form, which are well-suited to fit into approximately 00 character chunks**
 
 ---
 
@@ -56,9 +55,9 @@
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:**
+**Embedding model: sentence-transformers/all-MiniLM-L6-v2**
 
-**Top-k:**
+**Top-k: 4**
 
 **Production tradeoff reflection:**
 
