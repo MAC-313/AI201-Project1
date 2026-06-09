@@ -49,12 +49,6 @@ This knowledge is very valuable because it is able to give prospective students 
 
 ## Retrieval Approach
 
-<!-- Which embedding model are you using (e.g., all-MiniLM-L6-v2 via sentence-transformers)?
-     How many chunks will you retrieve per query (top-k)?
-     If you were deploying this for real users and cost wasn't a constraint, what tradeoffs
-     would you weigh in choosing a different embedding model — context length, multilingual
-     support, accuracy on domain-specific text, latency? -->
-
 **Embedding model: sentence-transformers/all-MiniLM-L6-v2**
 
 **Top-k: 4**
@@ -65,40 +59,27 @@ This knowledge is very valuable because it is able to give prospective students 
 
 ## Evaluation Plan
 
-<!-- List your 5 test questions with their expected correct answers.
-     Questions should be specific enough that you can judge whether the system's response
-     is right or wrong. "What are good dining halls?" is too vague.
-     "What do students say about wait times at [dining hall name] during lunch?" is testable. -->
-
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | Which dining hall receives the most praise for food quality? | West End Market (widely praised for high-quality steak, lobster, and its famous brunch pancakes) and Turner Place (known for gourmet hibachi rice and custom crepes). |
+| 2 | Which location is criticized for long wait times? | Turner Place (specifically noted for massive lines right when class blocks let out, requiring students to go mid-class to avoid crowds). |
+| 3 | Which dining hall is recommended for vegetarian students? | D2 (Dietrick Hall) which features a dedicated healthy/vegan option bar alongside its standard stations, or Origami in Turner Place which offers vegetarian hibachi options. |
+| 4 | Which location is considered overpriced? | On-campus dining in general according to student critiques, specifically noting examples like $10.25 for a small premade deli wrap as of late 2025. |
+| 5 | Which location is best for late-night dining? | DXpress (DX), which is open until 2 am for grab-and-go needs like corndog nuggets and pizza, or Deet's Place which serves Italian sodas and coffee until midnight. |
 
 ---
 
 ## Anticipated Challenges
 
-<!-- What could go wrong? Name at least two specific risks with reasoning.
-     Consider: noisy or inconsistent documents, missing source attribution, off-topic
-     retrieval, chunks that split key information across boundaries. -->
+1. Overfragmentation, i.e. a chunk does not split the text very well and we are left with adkward and lanky chunks that do not lead to a good query answer 
 
-1.
-
-2.
+2. Hallucinations in the form of general advice when the ingested documents lack super-specific menu items
 
 ---
 
 ## Architecture
 
-<!-- Draw a diagram of your pipeline showing the five stages:
-     Document Ingestion → Chunking → Embedding + Vector Store → Retrieval → Generation
-     Label each stage with the tool or library you're using.
-     You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
-     You'll use this diagram as context when prompting AI tools to implement each stage. -->
+[Document Ingestion: txt files] ──> [Chunking: Paragraph-based Chunker] ──> [Embedding: all-MiniLM-L6-v2] ──> [Vector Store: ChromaDB] ──> [Retrieval: Top-k Query] ──> [Generation: Groq Llama-3.3-70b-versatile]
 
 ---
 
