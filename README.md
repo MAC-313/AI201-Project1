@@ -1,7 +1,5 @@
 # Project 1
 
----
-
 ## Domain
 
 I chose to focus on the domain of dining, and scoured the internet for sources I could locate related to dining at a university of choosing. The title of my domain is "user reviews (students/staff) of dining options at Virginia Polytechnic Institute and State University (Virginia Tech)"
